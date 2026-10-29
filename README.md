@@ -25,11 +25,15 @@ cd clienteB-cede-o-soledispa
 
 npm install
 
-4. Levantar el servidor de desarrollo:
+4. Configurar Supabase:
+
+Copiar `.env.example` como `.env` y completar `VITE_SUPABASE_ANON_KEY` con la clave pública `anon` del proyecto. Después, ejecutar [docs/hito2_esquema.sql](docs/hito2_esquema.sql) en el SQL Editor de Supabase.
+
+5. Levantar el servidor de desarrollo:
 
 npm run dev
 
-5. Abrir en el navegador la URL que muestra la terminal (normalmente http://localhost:5173/).
+6. Abrir en el navegador la URL que muestra la terminal (normalmente http://localhost:5173/).
 
 Si el puerto 5173 está ocupado, Vite elige otro automáticamente y lo muestra en la terminal — no es un error.
 
