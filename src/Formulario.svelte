@@ -39,6 +39,10 @@
     event.preventDefault()
     submitted = false
     submitError = ''
+    if (!sessionEmail) {
+      submitError = 'Debes iniciar sesión para crear un pedido.'
+      return
+    }
     if (!hasNombre || !hasCorreo || !hasTamano || !hasFlores || !hasOccasion || !hasColors || !hasWrapping || !hasPreferences) return
 
     try {
@@ -74,7 +78,7 @@
       <div class="form-field form-field-wide"><label for="observaciones">Observaciones (opcional)</label><textarea id="observaciones" bind:value={formData.observaciones} rows="2"></textarea></div>
       <div class="form-field form-field-wide"><label for="extras">Extras e instrucciones de armado</label><input id="extras" bind:value={formData.extras} placeholder="Tarjeta pequeña, lazo..." /></div>
     </div>
-    <button type="submit" disabled={!sessionEmail}>Crear pedido</button>
+    <button type="submit">Crear pedido</button>
     {#if submitted}<p class="success-message" role="status">Pedido creado y guardado en Supabase.</p>{/if}
     {#if submitError}<p class="error-message" role="alert">{submitError}</p>{/if}
   </form>

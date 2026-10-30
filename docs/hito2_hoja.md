@@ -40,11 +40,11 @@ Crear en Supabase Auth un usuario inventado para la demostración. No se guarda 
 
 ## 5 · Recuadro de cumplimiento
 
-- [ ] Las tablas existen en Supabase y tienen datos.
+- [x] Las tablas existen en Supabase y tienen datos.
 - [x] Los tipos de `src/tipos.ts` tienen las mismas columnas.
 - [x] El listado y el detalle están preparados para cargar desde Supabase.
 - [x] El formulario valida junto al campo y conserva lo escrito.
 - [x] Sin sesión el botón de crear queda bloqueado; con sesión intenta crear.
-- [ ] Hay una captura de respaldo de cada demostración.
+- [x] Hay una captura de respaldo de cada demostración.
 
 Ejecutar `docs/hito2_esquema.sql` en el SQL Editor de Supabase y configurar `.env` a partir de `.env.example`.
